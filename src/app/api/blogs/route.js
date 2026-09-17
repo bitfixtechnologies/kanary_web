@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { blogPosts as fallbackBlogs } from '@/data/blogData';
+import { blogPosts as fallbackBlogs } from '../../../data/blogData';
 
 const BACKEND_URL = process.env.BACKEND_URL || 'https://kanary-backend.onrender.com';
 
