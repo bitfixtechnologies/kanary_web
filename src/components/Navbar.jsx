@@ -41,6 +41,7 @@ export default function Navbar() {
     { name: 'Shorts', href: '#shorts' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Why Us', href: '#why-us' },
+    { name: 'Stories', href: '#blog' },
     { name: 'Reviews', href: '#reviews' },
     { name: 'Contact', href: '#contact' },
   ];

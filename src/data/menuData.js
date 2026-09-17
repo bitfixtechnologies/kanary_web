@@ -7,7 +7,8 @@ export const menuData = {
       "spicy": false,
       "veg": false,
       "dairy": false,
-      "image": "https://res.cloudinary.com/lzebcil2/image/upload/v1789642283/kanary_restaurant_dishes/ITM0001362_u1brcz.jpg"
+      "image": "https://res.cloudinary.com/lzebcil2/image/upload/v1789642283/kanary_restaurant_dishes/ITM0001362_u1brcz.jpg",
+      "_id": "6aabccc97f67473731daebd5"
     },
     {
       "name": "new1",

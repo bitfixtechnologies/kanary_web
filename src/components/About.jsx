@@ -67,7 +67,7 @@ export default function About() {
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-gold font-sans font-bold text-xs uppercase tracking-widest block">
-                    ✨ PURE A2 MILK & GHEE GUARANTEE
+                    PURE A2 MILK & GHEE GUARANTEE
                   </span>
                   <p className="font-serif text-white text-sm sm:text-base italic leading-relaxed">
                     “Made from A2 milk sourced from cows that naturally produce A2 beta-casein, our milk and ghee bring together traditional dairy goodness, rich taste, and premium quality.”
