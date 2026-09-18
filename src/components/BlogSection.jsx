@@ -307,7 +307,6 @@ export default function BlogSection() {
                     Read Story
                     <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
                   </span>
-                  <Sparkles className="w-4 h-4 text-gold/30 group-hover:text-gold transition-colors" />
                 </div>
               </div>
             </motion.div>
