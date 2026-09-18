@@ -8,6 +8,7 @@ import Reviews from '../components/Reviews';
 import Reservation from '../components/Reservation';
 import Contact from '../components/Contact';
 import ShortsSection from '../components/ShortsSection';
+import BlogSection from '../components/BlogSection';
 
 export default function HomePage() {
   return (
@@ -52,6 +53,9 @@ export default function HomePage() {
       <section id="reserve">
         <Reservation />
       </section>
+
+      {/* Blog / Culinary Stories Section */}
+      <BlogSection />
 
       {/* Contact Panel */}
       <section id="contact">
