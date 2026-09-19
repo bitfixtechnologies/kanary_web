@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Leaf, Flame, Utensils, Search, Sparkles, Milk, MapPin, X, HelpCircle, Camera, Check, Save, Image as ImageIcon, Sliders, Plus, Upload, PlusCircle, Trash2 } from 'lucide-react';
+import { Leaf, Flame, Utensils, Search, Sparkles, Milk, MapPin, X, HelpCircle, Camera, Check, Save, Image as ImageIcon, Sliders, Plus, Upload, PlusCircle, Trash2, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
 import { menuData as initialMenuData } from '../data/menuData';
 import { allImagesByFolder } from '../data/allImagesData';
@@ -344,6 +344,31 @@ export default function FullMenuPage() {
     }
   };
 
+  const handleRefreshMasterMenu = async () => {
+    setIsSaving(true);
+    setSaveMessage('Syncing latest menu from database...');
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('kanary_menu_data');
+      }
+      const res = await fetch('/api/save-menu');
+      const data = await res.json();
+      if (data.success && data.menuData) {
+        const sanitized = sanitizeCloudinaryUrls(data.menuData);
+        setCurrentMenuData(sanitized);
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('kanary_menu_data', JSON.stringify(sanitized));
+        }
+        setSaveMessage('✓ Synced latest menu from database!');
+        setTimeout(() => setSaveMessage(''), 4000);
+      }
+    } catch (err) {
+      setSaveMessage('Failed to sync from database');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
   // Assign selected image to current dish
   const handleAssignImage = (imagePath) => {
     if (!selectedDish) return;
@@ -409,6 +434,15 @@ export default function FullMenuPage() {
           >
             <Plus className="w-4 h-4" />
             Add New Dish
+          </button>
+
+          <button
+            onClick={handleRefreshMasterMenu}
+            className="flex items-center gap-2 bg-primary-dark/80 hover:bg-gold hover:text-primary-dark text-gold border border-gold/40 px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer"
+            title="Sync latest menu from database"
+          >
+            <RefreshCw className="w-4 h-4" />
+            Sync Database Menu
           </button>
 
           <button
