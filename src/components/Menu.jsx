@@ -35,7 +35,7 @@ export default function Menu() {
   }, []);
 
   const chefSpecials = currentMenuData?.chefSpecials || [];
-  const specialties = chefSpecials.map((item, index) => ({
+  const specialties = chefSpecials.slice(0, 6).map((item, index) => ({
     id: index + 1,
     name: item.name,
     image: item.image,
@@ -66,8 +66,8 @@ export default function Menu() {
           </p>
         </div>
 
-        {/* 4 Specialties Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {/* 6 Specialties Grid (3 on 1st Row, 3 on 2nd Row) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {specialties.map((dish, index) => (
             <motion.div
               key={dish.id}
