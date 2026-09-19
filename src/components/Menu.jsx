@@ -11,24 +11,13 @@ export default function Menu() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('kanary_menu_data');
-      if (saved) {
-        try {
-          setCurrentMenuData(JSON.parse(saved));
-        } catch (e) {}
-      }
+      localStorage.removeItem('kanary_menu_data');
     }
-
     fetch('/api/save-menu')
       .then(res => res.json())
       .then(data => {
         if (data.success && data.menuData) {
           setCurrentMenuData(data.menuData);
-          if (typeof window !== 'undefined') {
-            try {
-              localStorage.setItem('kanary_menu_data', JSON.stringify(data.menuData));
-            } catch (e) {}
-          }
         }
       })
       .catch(err => console.error(err));

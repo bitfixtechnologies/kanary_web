@@ -71,30 +71,18 @@ export default function FullMenuPage() {
   const [isSaving, setIsSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState('');
 
-  // Load local cache for instant render, then fetch latest master menu from server for multi-device sync
+  // Always fetch latest master menu from server (MongoDB Atlas) so all devices sync added & deleted items
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('kanary_menu_data');
-      if (saved) {
-        try {
-          const parsed = JSON.parse(saved);
-          setCurrentMenuData(sanitizeCloudinaryUrls(parsed));
-        } catch (e) {}
-      }
+      localStorage.removeItem('kanary_menu_data');
     }
 
-    // Always fetch latest master menu from server so all devices sync added & deleted items
     fetch('/api/save-menu')
       .then(res => res.json())
       .then(data => {
         if (data.success && data.menuData) {
           const sanitized = sanitizeCloudinaryUrls(data.menuData);
           setCurrentMenuData(sanitized);
-          if (typeof window !== 'undefined') {
-            try {
-              localStorage.setItem('kanary_menu_data', JSON.stringify(sanitized));
-            } catch (e) {}
-          }
         }
       })
       .catch(err => console.error('Failed to sync master menu from server:', err));
@@ -194,16 +182,8 @@ export default function FullMenuPage() {
   };
 
 
-  // Always retrieve fresh, deep-cloned menu data combining local storage and state
+  // Always retrieve fresh, deep-cloned menu data from current state
   const getFreshMenuData = () => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('kanary_menu_data');
-      if (saved) {
-        try {
-          return JSON.parse(saved);
-        } catch (e) {}
-      }
-    }
     return JSON.parse(JSON.stringify(currentMenuData));
   };
 
@@ -313,12 +293,9 @@ export default function FullMenuPage() {
     }
   };
 
-  // Unified Helper to update state, sync to localStorage, and persist to menuData.js via API
+  // Unified Helper to update state and persist to MongoDB Atlas via API
   const saveAndPersistMenuData = async (updatedData, successMsg = '✓ Changes saved!') => {
     setCurrentMenuData(updatedData);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('kanary_menu_data', JSON.stringify(updatedData));
-    }
 
     setIsSaving(true);
     setSaveMessage('');
@@ -330,7 +307,7 @@ export default function FullMenuPage() {
       });
       const data = await res.json();
       if (data.success) {
-        setSaveMessage(successMsg || '✓ Changes saved permanently!');
+        setSaveMessage(successMsg || '✓ Changes saved permanently to database!');
         setTimeout(() => setSaveMessage(''), 4000);
       } else {
         setSaveMessage('✓ Menu updated in active session!');
@@ -356,9 +333,6 @@ export default function FullMenuPage() {
       if (data.success && data.menuData) {
         const sanitized = sanitizeCloudinaryUrls(data.menuData);
         setCurrentMenuData(sanitized);
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('kanary_menu_data', JSON.stringify(sanitized));
-        }
         setSaveMessage('✓ Synced latest menu from database!');
         setTimeout(() => setSaveMessage(''), 4000);
       }
