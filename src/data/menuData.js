@@ -3,7 +3,7 @@ export const menuData = {
     {
       "title": "Kanary Smoked Beef Brisket",
       "name": "Kanary Smoked Beef Brisket",
-      "price": 659,
+      "price": 723,
       "description": "Premium slow-smoked beef brisket, infused with aromatic spices and natural wood smoke.",
       "spicy": false,
       "veg": false,
@@ -14,7 +14,7 @@ export const menuData = {
     {
       "title": "Cheese Infused Chicken",
       "name": "Cheese Infused Chicken",
-      "price": "529 / 879",
+      "price": "575 / 967",
       "description": "Succulent chicken breasts stuffed with a premium three-cheese blend and grilled to perfection.",
       "spicy": false,
       "veg": false,
@@ -25,7 +25,7 @@ export const menuData = {
     {
       "title": "Beef Tenderloin",
       "name": "Beef Tenderloin",
-      "price": 505,
+      "price": 556,
       "description": "Tender beef steak cuts grilled to order, served with crisp French fries and an organic garden green salad.",
       "spicy": false,
       "veg": false,
@@ -36,7 +36,7 @@ export const menuData = {
     {
       "title": "Slow Cooked Beef Ribs",
       "name": "Slow Cooked Beef Ribs",
-      "price": 659,
+      "price": 723,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -47,7 +47,7 @@ export const menuData = {
     {
       "title": "Smoked Barbeque Ribs",
       "name": "Smoked Barbeque Ribs",
-      "price": 659,
+      "price": 725,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -69,7 +69,7 @@ export const menuData = {
     {
       "title": "Grilled Chicken Breast",
       "name": "Grilled Chicken Breast",
-      "price": 494,
+      "price": 543,
       "description": "Tender chicken breast marinated in fresh herbs and flame-grilled, served with seasoned roast vegetables.",
       "spicy": false,
       "veg": false,
@@ -80,9 +80,59 @@ export const menuData = {
   ],
   "starters": [
     {
+      "title": "Lemon Coriander (Veg/Chicken)",
+      "name": "Lemon Coriander (Veg/Chicken)",
+      "price": "178 / 199",
+      "description": "Refreshing clear soup with fresh coriander, lemon juice, and vegetables.",
+      "spicy": false,
+      "veg": true,
+      "dairy": false,
+      "image": "https://res.cloudinary.com/lzebcil2/image/upload/v1789642404/kanary_restaurant_dishes/ITM0000557_kw6uf8.jpg"
+    },
+    {
+      "title": "Seafood Soup",
+      "name": "Seafood Soup",
+      "price": 251,
+      "description": "Hearty broth simmered with fresh fish, prawns, and lemongrass.",
+      "spicy": true,
+      "veg": false,
+      "dairy": false,
+      "image": "https://res.cloudinary.com/lzebcil2/image/upload/v1789642404/kanary_restaurant_dishes/ITM0000557_kw6uf8.jpg"
+    },
+    {
+      "title": "Cream of Tomato",
+      "name": "Cream of Tomato",
+      "price": 188,
+      "description": "Classic ripe tomato soup served with crunchy butter croutons.",
+      "spicy": false,
+      "veg": true,
+      "dairy": true,
+      "image": "https://res.cloudinary.com/lzebcil2/image/upload/v1789642404/kanary_restaurant_dishes/ITM0000557_kw6uf8.jpg"
+    },
+    {
+      "title": "Cream of Chicken",
+      "name": "Cream of Chicken",
+      "price": 219,
+      "description": "Creamy chicken soup seasoned with aromatic herbs and black pepper.",
+      "spicy": false,
+      "veg": false,
+      "dairy": true,
+      "image": "https://res.cloudinary.com/lzebcil2/image/upload/v1789642404/kanary_restaurant_dishes/ITM0000557_kw6uf8.jpg"
+    },
+    {
+      "title": "Cream of Mushroom (Veg/Chicken)",
+      "name": "Cream of Mushroom (Veg/Chicken)",
+      "price": "198 / 219",
+      "description": "Rich, velvety soup prepared with fresh button mushrooms and cream.",
+      "spicy": false,
+      "veg": true,
+      "dairy": true,
+      "image": "https://res.cloudinary.com/lzebcil2/image/upload/v1789642404/kanary_restaurant_dishes/ITM0000557_kw6uf8.jpg"
+    },
+    {
       "title": "Chicken Manchow Soup",
       "name": "Chicken Manchow Soup",
-      "price": 199,
+      "price": 219,
       "description": "A classic spicy and tangy Indo-Chinese soup loaded with shredded chicken and topped with crispy noodles.",
       "spicy": true,
       "veg": false,
@@ -93,7 +143,7 @@ export const menuData = {
     {
       "title": "Hot & Sour Veg Soup",
       "name": "Hot & Sour Veg Soup",
-      "price": 178,
+      "price": 196,
       "description": "Tangy and fiery vegetable soup packed with julienne carrots, bamboo shoots, and mushrooms.",
       "spicy": true,
       "veg": true,
@@ -104,7 +154,7 @@ export const menuData = {
     {
       "title": "Hot & Sour Chicken Soup",
       "name": "Hot & Sour Chicken Soup",
-      "price": 199,
+      "price": 219,
       "description": "A warming, classic hot and sour broth featuring tender chicken shreds and fresh scallions.",
       "spicy": true,
       "veg": false,
@@ -115,7 +165,7 @@ export const menuData = {
     {
       "title": "Sweet Corn Veg Soup",
       "name": "Sweet Corn Veg Soup",
-      "price": 178,
+      "price": 196,
       "description": "A comforting, velvety soup made with sweet golden corn kernels and farm-fresh minced veggies.",
       "spicy": false,
       "veg": true,
@@ -126,7 +176,7 @@ export const menuData = {
     {
       "title": "Sweet Corn Chicken Soup",
       "name": "Sweet Corn Chicken Soup",
-      "price": 199,
+      "price": 219,
       "description": "A delicate, cream-style sweet corn soup garnished with egg drop ribbons and tender chicken.",
       "spicy": false,
       "veg": false,
@@ -137,7 +187,7 @@ export const menuData = {
     {
       "title": "Chicken Momos (Schezwan)",
       "name": "Chicken Momos (Schezwan)",
-      "price": 251,
+      "price": 254,
       "description": "Steamed chicken dumplings tossed in a bold, aromatic, and spicy Schezwan sauce.",
       "spicy": true,
       "veg": false,
@@ -148,7 +198,7 @@ export const menuData = {
     {
       "title": "Veg Momos (Schezwan)",
       "name": "Veg Momos (Schezwan)",
-      "price": 199,
+      "price": 219,
       "description": "Steamed garden vegetable dumplings coated in a fiery, hot Schezwan pepper sauce.",
       "spicy": true,
       "veg": true,
@@ -159,7 +209,7 @@ export const menuData = {
     {
       "title": "Chicken Momos (Saffron Cream)",
       "name": "Chicken Momos (Saffron Cream)",
-      "price": 251,
+      "price": 265,
       "description": "Succulent chicken momos served in a luxurious, aromatic saffron-infused dairy cream sauce.",
       "spicy": false,
       "veg": false,
@@ -170,7 +220,7 @@ export const menuData = {
     {
       "title": "Veg Momos (Saffron Cream)",
       "name": "Veg Momos (Saffron Cream)",
-      "price": 220,
+      "price": 242,
       "description": "Gourmet vegetable momos bathed in a rich, buttery saffron and cardamom cream reduction.",
       "spicy": false,
       "veg": true,
@@ -181,7 +231,7 @@ export const menuData = {
     {
       "title": "Honey Chilli Potato",
       "name": "Honey Chilli Potato",
-      "price": 167,
+      "price": 183,
       "description": "Crispy fried potato fingers coated in a sweet, sticky honey-chili glaze and garnished with sesame.",
       "spicy": true,
       "veg": true,
@@ -192,7 +242,7 @@ export const menuData = {
     {
       "title": "Dynamite Paneer",
       "name": "Dynamite Paneer",
-      "price": 231,
+      "price": 254,
       "description": "Crispy cottage cheese cubes tossed in our signature creamy, spicy, and tangy dynamite sauce.",
       "spicy": true,
       "veg": true,
@@ -203,7 +253,7 @@ export const menuData = {
     {
       "title": "Dynamite Shrimp",
       "name": "Dynamite Shrimp",
-      "price": 283,
+      "price": 311,
       "description": "Lightly battered crispy golden shrimp coated in our iconic spicy, creamy dynamite mayo glaze.",
       "spicy": true,
       "veg": false,
@@ -214,7 +264,7 @@ export const menuData = {
     {
       "title": "Honey Chilli Chicken",
       "name": "Honey Chilli Chicken",
-      "price": 252,
+      "price": 277,
       "description": "Crisp golden chicken chunks glazed in honey, ginger, and green chilies, topped with spring onions.",
       "spicy": true,
       "veg": false,
@@ -225,7 +275,7 @@ export const menuData = {
     {
       "title": "Tender Chicken",
       "name": "Tender Chicken",
-      "price": 262,
+      "price": 288,
       "description": "Pan-seared, lightly seasoned tender cuts of chicken, serving a clean and lean protein option.",
       "spicy": false,
       "veg": false,
@@ -236,7 +286,7 @@ export const menuData = {
     {
       "title": "Buffalo Chicken Wings",
       "name": "Buffalo Chicken Wings",
-      "price": 262,
+      "price": 288,
       "description": "Crisp chicken wings glazed in authentic spicy Buffalo cayenne hot sauce, served with cool dip.",
       "spicy": true,
       "veg": false,
@@ -247,7 +297,7 @@ export const menuData = {
     {
       "title": "Prawns Tempura",
       "name": "Prawns Tempura",
-      "price": 283,
+      "price": 311,
       "description": "Japanese-style crispy, airy tempura-battered prawns served with a seasoned dipping sauce.",
       "spicy": false,
       "veg": false,
@@ -269,7 +319,7 @@ export const menuData = {
     {
       "title": "Finger Fish",
       "name": "Finger Fish",
-      "price": 167,
+      "price": 314,
       "description": "Premium white fish fillets cut into fingers, breaded and golden-fried, served with tartar dip.",
       "spicy": false,
       "veg": false,
@@ -280,7 +330,7 @@ export const menuData = {
     {
       "title": "French Fries / Peri Peri Fries",
       "name": "French Fries / Peri Peri Fries",
-      "price": 188,
+      "price": "165 / 181",
       "description": "Classic golden-fried potato chips, available salted or tossed in high-kick peri peri dry rub.",
       "spicy": true,
       "veg": true,
@@ -291,7 +341,7 @@ export const menuData = {
     {
       "title": "Spicy Chicken Strips",
       "name": "Spicy Chicken Strips",
-      "price": 283,
+      "price": 311,
       "description": "Crunchy breaded chicken breast strips served over fresh shredded cabbage with house fries.",
       "spicy": true,
       "veg": false,
@@ -326,7 +376,7 @@ export const menuData = {
     {
       "title": "Veg Fried Rice / Schezwan",
       "name": "Veg Fried Rice / Schezwan",
-      "price": "188 / 199",
+      "price": "207 / 219",
       "description": "Wok-fried premium long-grain rice with vegetables, available in classic or spicy Schezwan.",
       "spicy": false,
       "veg": true,
@@ -337,7 +387,7 @@ export const menuData = {
     {
       "title": "Chicken Fried Rice / Schezwan",
       "name": "Chicken Fried Rice / Schezwan",
-      "price": "219 / 220",
+      "price": "241 / 242",
       "description": "Stir-fried rice with egg, shredded chicken, and greens, with optional Schezwan style.",
       "spicy": false,
       "veg": false,
@@ -348,7 +398,7 @@ export const menuData = {
     {
       "title": "Egg Fried Rice / Schezwan",
       "name": "Egg Fried Rice / Schezwan",
-      "price": 209,
+      "price": 230,
       "description": "Fluffy basmati rice tossed with organic eggs, soy sauce, and aromatic green scallions.",
       "spicy": false,
       "veg": false,
@@ -359,7 +409,7 @@ export const menuData = {
     {
       "title": "Mixed Fried Rice / Schezwan",
       "name": "Mixed Fried Rice / Schezwan",
-      "price": 273,
+      "price": 300,
       "description": "The ultimate combo fried rice loaded with beef cubes, shredded chicken, eggs, and veggies.",
       "spicy": false,
       "veg": false,
@@ -370,7 +420,7 @@ export const menuData = {
     {
       "title": "Chicken Hakka Noodles / Schezwan",
       "name": "Chicken Hakka Noodles / Schezwan",
-      "price": "253 / 267",
+      "price": "278 / 294",
       "description": "Wok-tossed thin noodles with chicken and bell peppers, available in mild or fiery styles.",
       "spicy": false,
       "veg": false,
@@ -381,7 +431,7 @@ export const menuData = {
     {
       "title": "Veg Hakka Noodles / Schezwan",
       "name": "Veg Hakka Noodles / Schezwan",
-      "price": 231,
+      "price": 254,
       "description": "Thin noodles tossed with crisp carrots, cabbage, and peppers, in classic or Schezwan option.",
       "spicy": false,
       "veg": true,
@@ -392,7 +442,7 @@ export const menuData = {
     {
       "title": "Biriyani Rice",
       "name": "Biriyani Rice",
-      "price": 143,
+      "price": 157,
       "description": "Fragrant, premium Kaima rice cooked with pure A2 ghee, mild cardamom, and biryani spices.",
       "spicy": false,
       "veg": true,
@@ -403,7 +453,7 @@ export const menuData = {
     {
       "title": "Malabar Chicken Dum Biriyani",
       "name": "Malabar Chicken Dum Biriyani",
-      "price": 209,
+      "price": 230,
       "description": "Authentic Kozhikode style dum biryani made with soft chicken pieces, Kaima rice, and fried cashew.",
       "spicy": true,
       "veg": false,
@@ -414,7 +464,7 @@ export const menuData = {
     {
       "title": "White Chana Masala",
       "name": "White Chana Masala",
-      "price": 185,
+      "price": 203,
       "description": "Kabuli chickpeas simmered in a rich tomato, ginger, garlic, and fresh ground masala gravy.",
       "spicy": false,
       "veg": true,
@@ -425,7 +475,7 @@ export const menuData = {
     {
       "title": "Veg Kuruma",
       "name": "Veg Kuruma",
-      "price": 105,
+      "price": 115,
       "description": "Assorted vegetables cooked in a velvety coconut milk gravy flavored with cardamom and cashews.",
       "spicy": false,
       "veg": true,
@@ -436,7 +486,7 @@ export const menuData = {
     {
       "title": "Chicken Tikka Masala",
       "name": "Chicken Tikka Masala",
-      "price": 262,
+      "price": 288,
       "description": "Tandoori chicken boneless thighs simmered in a spiced tomato, cream, and butter-onion gravy.",
       "spicy": true,
       "veg": false,
@@ -447,7 +497,7 @@ export const menuData = {
     {
       "title": "Paneer Butter Masala",
       "name": "Paneer Butter Masala",
-      "price": 252,
+      "price": 277,
       "description": "Soft paneer cubes cooked in a sweet, mildly spicy, and creamy tomato-cashew butter sauce.",
       "spicy": false,
       "veg": true,
@@ -458,7 +508,7 @@ export const menuData = {
     {
       "title": "Butter Chicken Gravy",
       "name": "Butter Chicken Gravy",
-      "price": 262,
+      "price": 288,
       "description": "Classic boneless tandoori chicken cooked in a rich, buttery tomato gravy with dried fenugreek.",
       "spicy": false,
       "veg": false,
@@ -469,7 +519,7 @@ export const menuData = {
     {
       "title": "Chicken Roast",
       "name": "Chicken Roast",
-      "price": 252,
+      "price": 277,
       "description": "Semi-dry chicken preparation slow-cooked with caramelized onions, tomato, spices, and curry leaves.",
       "spicy": true,
       "veg": false,
@@ -480,7 +530,7 @@ export const menuData = {
     {
       "title": "Chicken Curry",
       "name": "Chicken Curry",
-      "price": 241,
+      "price": 265,
       "description": "Home-style chicken curry cooked in an aromatic onion-tomato gravy with traditional spices.",
       "spicy": true,
       "veg": false,
@@ -491,7 +541,7 @@ export const menuData = {
     {
       "title": "Chicken Mappas",
       "name": "Chicken Mappas",
-      "price": 262,
+      "price": 288,
       "description": "Traditional Kerala chicken dish cooked in medium-spiced coriander-coconut milk curry.",
       "spicy": false,
       "veg": false,
@@ -502,7 +552,7 @@ export const menuData = {
     {
       "title": "Chicken Stew",
       "name": "Chicken Stew",
-      "price": 189,
+      "price": 208,
       "description": "Mild, fragrant chicken curry simmered in thin coconut milk with potatoes, carrots, and whole spices.",
       "spicy": false,
       "veg": false,
@@ -513,7 +563,7 @@ export const menuData = {
     {
       "title": "Chicken Ghee Roast",
       "name": "Chicken Ghee Roast",
-      "price": 315,
+      "price": 347,
       "description": "Kundapur style rich chicken preparation, slow-cooked in pure A2 ghee and fiery Byadgi chilies.",
       "spicy": true,
       "veg": false,
@@ -524,7 +574,7 @@ export const menuData = {
     {
       "title": "Chicken Perattu",
       "name": "Chicken Perattu",
-      "price": 273,
+      "price": 300,
       "description": "A fiery, dry Kerala chicken dish roasted with crushed pepper, coconut slices, and garlic.",
       "spicy": true,
       "veg": false,
@@ -535,7 +585,7 @@ export const menuData = {
     {
       "title": "Chicken Kondattam",
       "name": "Chicken Kondattam",
-      "price": 273,
+      "price": 300,
       "description": "Crispy fried chicken bites tossed in a sweet, spicy, and tangy sun-dried chili masala sauce.",
       "spicy": true,
       "veg": false,
@@ -546,7 +596,7 @@ export const menuData = {
     {
       "title": "Beef Curry",
       "name": "Beef Curry",
-      "price": 299,
+      "price": 329,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -557,7 +607,7 @@ export const menuData = {
     {
       "title": "Beef Coconut Fry",
       "name": "Beef Coconut Fry",
-      "price": 293,
+      "price": 322,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -568,7 +618,7 @@ export const menuData = {
     {
       "title": "BDF (Kanary Special)",
       "name": "BDF (Kanary Special)",
-      "price": 336,
+      "price": 370,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -579,7 +629,7 @@ export const menuData = {
     {
       "title": "Beef Roast",
       "name": "Beef Roast",
-      "price": 251,
+      "price": 276,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -590,7 +640,7 @@ export const menuData = {
     {
       "title": "Fish N Chips",
       "name": "Fish N Chips",
-      "price": 496,
+      "price": 546,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -601,7 +651,7 @@ export const menuData = {
     {
       "title": "Fish Curry (Neymeen)",
       "name": "Fish Curry (Neymeen)",
-      "price": 336,
+      "price": 370,
       "description": "Fresh Seer Fish (Neymeen) simmered in a classic red chili and coconut-based Malabar gravy.",
       "spicy": true,
       "veg": false,
@@ -612,7 +662,7 @@ export const menuData = {
     {
       "title": "Neymeen Tawa Fry",
       "name": "Neymeen Tawa Fry",
-      "price": "As Per Size",
+      "price": "As Per Season",
       "description": "Premium Seer Fish steak marinated in home-ground chili-garlic paste and shallow-fried on a tawa.",
       "spicy": true,
       "veg": false,
@@ -623,7 +673,7 @@ export const menuData = {
     {
       "title": "Neymeen Mulakittathu",
       "name": "Neymeen Mulakittathu",
-      "price": 310,
+      "price": 341,
       "description": "Traditional spicy red Seer Fish curry cooked in tamarind (Kudampuli) water and fiery chili paste.",
       "spicy": true,
       "veg": false,
@@ -634,7 +684,7 @@ export const menuData = {
     {
       "title": "Prawn Roast",
       "name": "Prawn Roast",
-      "price": 366,
+      "price": 403,
       "description": "Juicy prawns slow-roasted with onion, ginger, garlic, tomato, and crushed black pepper.",
       "spicy": true,
       "veg": false,
@@ -645,7 +695,7 @@ export const menuData = {
     {
       "title": "Gobi Manchurian",
       "name": "Gobi Manchurian",
-      "price": 199,
+      "price": 219,
       "description": "Deep-fried cauliflower florets tossed in a sweet, sour, and slightly hot Manchurian glaze.",
       "spicy": true,
       "veg": true,
@@ -656,7 +706,7 @@ export const menuData = {
     {
       "title": "Paneer Manchurian",
       "name": "Paneer Manchurian",
-      "price": 252,
+      "price": 277,
       "description": "Crisp cottage cheese cubes cooked in a savory, tangy soy-chili sauce with capsicum.",
       "spicy": true,
       "veg": true,
@@ -667,7 +717,7 @@ export const menuData = {
     {
       "title": "Mushroom Manchurian",
       "name": "Mushroom Manchurian",
-      "price": 241,
+      "price": 265,
       "description": "Crispy button mushrooms sautéed in a garlic, ginger, soy, and spring onion Manchurian sauce.",
       "spicy": true,
       "veg": true,
@@ -678,7 +728,7 @@ export const menuData = {
     {
       "title": "Chilly Chicken / Manchurian",
       "name": "Chilly Chicken / Manchurian",
-      "price": 273,
+      "price": 300,
       "description": "Classic Chinese starter: chicken cubes wok-tossed with fresh peppers, onions, and dark soy.",
       "spicy": true,
       "veg": false,
@@ -689,7 +739,7 @@ export const menuData = {
     {
       "title": "Dragon Chicken",
       "name": "Dragon Chicken",
-      "price": 273,
+      "price": 300,
       "description": "Crispy fried chicken strips tossed in a fiery, sweet red pepper sauce with cashew nuts.",
       "spicy": true,
       "veg": false,
@@ -700,7 +750,7 @@ export const menuData = {
     {
       "title": "Thai Green Chicken Curry",
       "name": "Thai Green Chicken Curry",
-      "price": 283,
+      "price": 311,
       "description": "Spicy and fragrant Thai curry made with galangal, kaffir lime, lemongrass, and rich coconut cream.",
       "spicy": true,
       "veg": false,
@@ -713,7 +763,7 @@ export const menuData = {
     {
       "title": "Green Pepper Alfaham",
       "name": "Green Pepper Alfaham",
-      "price": "237 / 406 / 737",
+      "price": "261 / 447 / 811",
       "description": "Charcoal-grilled chicken marinated in freshly ground green peppercorns, herbs, and lemon juice. Served with Fries and Pita Bread.",
       "spicy": true,
       "veg": false,
@@ -724,7 +774,7 @@ export const menuData = {
     {
       "title": "Honey Chilli Alfaham",
       "name": "Honey Chilli Alfaham",
-      "price": "219 / 384 / 736",
+      "price": "241 / 422 / 810",
       "description": "Flame-grilled chicken glazed with a sweet honey and fiery bird's eye chili paste. Served with Fries and Pita Bread.",
       "spicy": true,
       "veg": false,
@@ -735,7 +785,7 @@ export const menuData = {
     {
       "title": "Peri Peri Chicken",
       "name": "Peri Peri Chicken",
-      "price": "219 / 384 / 736",
+      "price": "241 / 422 / 810",
       "description": "Succulent charcoal chicken marinated in a spicy, tangy African bird's eye chili marinade. Served with Fries and Pita Bread.",
       "spicy": true,
       "veg": false,
@@ -746,7 +796,7 @@ export const menuData = {
     {
       "title": "Masala Alfaham",
       "name": "Masala Alfaham",
-      "price": "219 / 384 / 736",
+      "price": "241 / 422 / 810",
       "description": "Charcoal grilled chicken coated in a rich Indian spice marinade. Served with Fries and Pita Bread.",
       "spicy": true,
       "veg": false,
@@ -757,7 +807,7 @@ export const menuData = {
     {
       "title": "Lebanese Alfaham",
       "name": "Lebanese Alfaham",
-      "price": "220 / 384 / 736",
+      "price": "242 / 422 / 810",
       "description": "Middle-Eastern style garlic and yogurt marinated chicken grilled over coals. Served with Fries and Pita Bread.",
       "spicy": false,
       "veg": false,
@@ -768,7 +818,7 @@ export const menuData = {
     {
       "title": "Shish Tawook",
       "name": "Shish Tawook",
-      "price": 428,
+      "price": 471,
       "description": "Tender chicken skewers marinated in garlic, lemon, and yogurt, grilled and served with fries and fresh hummus.",
       "spicy": false,
       "veg": false,
@@ -779,7 +829,7 @@ export const menuData = {
     {
       "title": "Mexican Chicken Shawarma",
       "name": "Mexican Chicken Shawarma",
-      "price": 208,
+      "price": 229,
       "description": "Juicy shredded chicken rolled in kuboos with a Mexican spice twist and garlic toum. Served with fries.",
       "spicy": true,
       "veg": false,
@@ -790,7 +840,7 @@ export const menuData = {
     {
       "title": "Shawarma Plate",
       "name": "Shawarma Plate",
-      "price": 384,
+      "price": 422,
       "description": "Deconstructed chicken shawarma served with a side of house-made hummus, garlic sauce, salad, and fries.",
       "spicy": false,
       "veg": false,
@@ -801,7 +851,7 @@ export const menuData = {
     {
       "title": "Turkish Shawaya",
       "name": "Turkish Shawaya",
-      "price": "231 / 462 / 734",
+      "price": "254 / 508 / 807",
       "description": "Traditional Turkish-style spit-roasted chicken, incredibly juicy, served with garlic paste, hummus, salad, and fries.",
       "spicy": false,
       "veg": false,
@@ -812,7 +862,7 @@ export const menuData = {
     {
       "title": "Masala Shawaya",
       "name": "Masala Shawaya",
-      "price": "219 / 440 / 714",
+      "price": "241 / 484 / 785",
       "description": "Spit-roasted chicken infused with hot and flavorful Indian tandoori spices. Served with hummus, salad, and fries.",
       "spicy": true,
       "veg": false,
@@ -823,7 +873,7 @@ export const menuData = {
     {
       "title": "Peri Peri Shawaya",
       "name": "Peri Peri Shawaya",
-      "price": "225 / 451 / 725",
+      "price": "248 / 496 / 798",
       "description": "Juicy spit-roasted chicken coated in hot Portuguese-African peri peri glaze. Served with hummus, salad, and fries.",
       "spicy": true,
       "veg": false,
@@ -834,7 +884,7 @@ export const menuData = {
     {
       "title": "Shawaya Platter",
       "name": "Shawaya Platter",
-      "price": 1099,
+      "price": 1209,
       "description": "Feast platter featuring 3 kinds of flavored chicken half, served alongside pita bread, hummus, garlic dip, salad, and fries.",
       "spicy": true,
       "veg": false,
@@ -847,7 +897,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Roast Dosa",
       "name": "A2 Ghee Roast Dosa",
-      "price": 127,
+      "price": 140,
       "description": "Crispy, paper-thin golden crepe cooked in pure grass-fed A2 cow ghee, served with sambar and chutneys.",
       "spicy": false,
       "veg": true,
@@ -858,7 +908,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Tattu Dosa",
       "name": "A2 Ghee Tattu Dosa",
-      "price": 105,
+      "price": 116,
       "description": "Set of three soft, spongy local tattu dosas cooked in A2 ghee, served with special onion Chammanthi.",
       "spicy": false,
       "veg": true,
@@ -869,7 +919,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Masala Dosa",
       "name": "A2 Ghee Masala Dosa",
-      "price": 146,
+      "price": 161,
       "description": "Crispy ghee roast crepe stuffed with a spiced potato-onion mash, served with coconut and tomato chutneys.",
       "spicy": false,
       "veg": true,
@@ -880,7 +930,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Podi Dosa",
       "name": "A2 Ghee Podi Dosa",
-      "price": 146,
+      "price": 161,
       "description": "Ghee-brushed crispy dosa sprinkled generously with a fiery local spiced lentil powder (podi).",
       "spicy": true,
       "veg": true,
@@ -891,7 +941,7 @@ export const menuData = {
     {
       "title": "Plain Dosa",
       "name": "Plain Dosa",
-      "price": 95,
+      "price": 105,
       "description": "Traditional fermented rice and lentil crepe, crispy and gold, served with regional chutneys.",
       "spicy": false,
       "veg": true,
@@ -902,7 +952,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Onion Uthappam",
       "name": "A2 Ghee Onion Uthappam",
-      "price": 127,
+      "price": 140,
       "description": "Thick, spongy rice pancake topped with fresh chopped onions, green chilies, and fried in A2 ghee.",
       "spicy": false,
       "veg": true,
@@ -913,7 +963,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Beef Dosa",
       "name": "A2 Ghee Beef Dosa",
-      "price": 261,
+      "price": 287,
       "description": "Premium crispy dosa rolled with a spiced dry beef roast stuffing and finished with A2 ghee.",
       "spicy": true,
       "veg": false,
@@ -924,7 +974,7 @@ export const menuData = {
     {
       "title": "Butter Chicken Dosa",
       "name": "Butter Chicken Dosa",
-      "price": 261,
+      "price": 287,
       "description": "Decadent golden dosa stuffed with cream-loaded, succulent butter chicken gravy.",
       "spicy": false,
       "veg": false,
@@ -935,7 +985,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Schezwan Chicken Dosa",
       "name": "A2 Ghee Schezwan Chicken Dosa",
-      "price": 261,
+      "price": 287,
       "description": "A fusion special: crispy ghee dosa filled with stir-fried spicy Schezwan chicken shreds.",
       "spicy": true,
       "veg": false,
@@ -946,7 +996,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Spring Chicken Dosa",
       "name": "A2 Ghee Spring Chicken Dosa",
-      "price": 261,
+      "price": 316,
       "description": "Dosa stuffed with chicken strips, shredded cabbage, carrots, onion, and herbs roasted in ghee.",
       "spicy": false,
       "veg": false,
@@ -957,7 +1007,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Paneer Masala Dosa",
       "name": "A2 Ghee Paneer Masala Dosa",
-      "price": 199,
+      "price": 219,
       "description": "Crispy crepe filled with a savory spiced cottage cheese scramble roasted in pure A2 ghee.",
       "spicy": false,
       "veg": true,
@@ -968,7 +1018,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Kanary Porotta",
       "name": "A2 Ghee Kanary Porotta",
-      "price": 26,
+      "price": 39,
       "description": "Layered, flaky Kerala flatbread made with A2 ghee, soft on the inside and crispy on the outside.",
       "spicy": false,
       "veg": true,
@@ -979,7 +1029,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Chappatti",
       "name": "A2 Ghee Chappatti",
-      "price": 27,
+      "price": 29,
       "description": "Soft, healthy whole wheat flatbread rolled and griddled with a smear of grass-fed A2 ghee.",
       "spicy": false,
       "veg": true,
@@ -990,7 +1040,7 @@ export const menuData = {
     {
       "title": "Beef Lappa Porotta",
       "name": "Beef Lappa Porotta",
-      "price": 241,
+      "price": 265,
       "description": "Flaky porotta envelope stuffed with a spiced minced beef and egg mixture, pan-fried.",
       "spicy": true,
       "veg": false,
@@ -1001,7 +1051,7 @@ export const menuData = {
     {
       "title": "Chicken Lappa Porotta",
       "name": "Chicken Lappa Porotta",
-      "price": 220,
+      "price": 242,
       "description": "Kerala flatbread pocket stuffed with spiced minced chicken, herbs, and egg.",
       "spicy": false,
       "veg": false,
@@ -1012,7 +1062,7 @@ export const menuData = {
     {
       "title": "A2 Ghee Nool Porotta",
       "name": "A2 Ghee Nool Porotta",
-      "price": 26,
+      "price": 29,
       "description": "String-styled flaky Kerala porotta cooked in pure A2 ghee, highly layered and soft.",
       "spicy": false,
       "veg": true,
@@ -1025,7 +1075,7 @@ export const menuData = {
     {
       "title": "Hummus Platter",
       "name": "Hummus Platter",
-      "price": 296,
+      "price": 327,
       "description": "Creamy pureed chickpeas with tahini, olive oil, and garlic, served with toasted pita bread slices.",
       "spicy": false,
       "veg": true,
@@ -1036,7 +1086,7 @@ export const menuData = {
     {
       "title": "Fattoush Salad",
       "name": "Fattoush Salad",
-      "price": 296,
+      "price": 326,
       "description": "Levantine salad featuring crisp mixed greens, radish, cucumber, tomato, and sumac-toasted pita.",
       "spicy": false,
       "veg": true,
@@ -1047,7 +1097,7 @@ export const menuData = {
     {
       "title": "Greek Salad",
       "name": "Greek Salad",
-      "price": 362,
+      "price": 398,
       "description": "Classic salad with cucumber, ripe tomatoes, red onions, kalamata olives, and creamy feta cheese.",
       "spicy": false,
       "veg": true,
@@ -1058,7 +1108,7 @@ export const menuData = {
     {
       "title": "Chicken Caesar Salad",
       "name": "Chicken Caesar Salad",
-      "price": 362,
+      "price": 398,
       "description": "Crisp romaine lettuce tossed in Caesar dressing, topped with grilled chicken, croutons, and parmesan shavings.",
       "spicy": false,
       "veg": false,
@@ -1069,7 +1119,7 @@ export const menuData = {
     {
       "title": "Veg Caesar Salad",
       "name": "Veg Caesar Salad",
-      "price": 274,
+      "price": 301,
       "description": "Fresh romaine lettuce, crunchy herb croutons, and shaved parmesan cheese tossed in house Caesar dressing.",
       "spicy": false,
       "veg": true,
@@ -1080,7 +1130,7 @@ export const menuData = {
     {
       "title": "Maryland Chicken Salad",
       "name": "Maryland Chicken Salad",
-      "price": 296,
+      "price": 326,
       "description": "Southern-style crispy fried chicken strips served over a bed of garden fresh greens and honey-mustard.",
       "spicy": false,
       "veg": false,
@@ -1091,7 +1141,7 @@ export const menuData = {
     {
       "title": "3 Bean Salad",
       "name": "3 Bean Salad",
-      "price": 252,
+      "price": 277,
       "description": "A high-protein salad made of green beans, kidney beans, and chickpeas tossed in a light herb vinaigrette.",
       "spicy": false,
       "veg": true,
@@ -1102,7 +1152,7 @@ export const menuData = {
     {
       "title": "Quinoa Salad",
       "name": "Quinoa Salad",
-      "price": 276,
+      "price": 304,
       "description": "Nutritious cooked organic quinoa tossed with cherry tomatoes, cucumbers, bell peppers, mint, and lemon-oil.",
       "spicy": false,
       "veg": true,
@@ -1115,7 +1165,7 @@ export const menuData = {
     {
       "title": "Southern Fried Chicken Burger",
       "name": "Southern Fried Chicken Burger",
-      "price": 356,
+      "price": 391,
       "description": "Two breaded chicken breasts, Apple Cider slaw, honey mustard, inside a black brioche bun. Served with fries.",
       "spicy": true,
       "veg": false,
@@ -1126,7 +1176,7 @@ export const menuData = {
     {
       "title": "Gone Black (Beef Burger)",
       "name": "Gone Black (Beef Burger)",
-      "price": 384,
+      "price": 422,
       "description": "Beef patty, tandoori dip, sautéed mushrooms, parmesan and yellow cheddar, inside a black bun. Served with fries.",
       "spicy": false,
       "veg": false,
@@ -1137,7 +1187,7 @@ export const menuData = {
     {
       "title": "Schezwan Chicken Burger",
       "name": "Schezwan Chicken Burger",
-      "price": 356,
+      "price": 391,
       "description": "Double chicken breast fillet, Schezwan mayo, cheddar cheese, and crunchy iceberg lettuce. Served with fries.",
       "spicy": true,
       "veg": false,
@@ -1148,7 +1198,7 @@ export const menuData = {
     {
       "title": "Double Stack Club Sandwich",
       "name": "Double Stack Club Sandwich",
-      "price": 336,
+      "price": 370,
       "description": "Three toasted bread slices layered with butter, premium beef tenderloin mix, bell peppers, and cheddar. Served with fries.",
       "spicy": false,
       "veg": false,
@@ -1159,7 +1209,7 @@ export const menuData = {
     {
       "title": "Peri Peri Chicken Sandwich",
       "name": "Peri Peri Chicken Sandwich",
-      "price": 314,
+      "price": 345,
       "description": "Spicy peri peri chicken mix, peri peri dip, honey mustard, and greens in three toasted bread slices. Served with fries.",
       "spicy": true,
       "veg": false,
@@ -1170,7 +1220,7 @@ export const menuData = {
     {
       "title": "Grilled Cheese Sandwich",
       "name": "Grilled Cheese Sandwich",
-      "price": 240,
+      "price": 264,
       "description": "Classic triple-layer grilled bread filled with melted cheddar and mozzarella cheese. Served with fries.",
       "spicy": false,
       "veg": true,
@@ -1181,7 +1231,7 @@ export const menuData = {
     {
       "title": "Chicken Mayo Club Sandwich",
       "name": "Chicken Mayo Club Sandwich",
-      "price": 252,
+      "price": 277,
       "description": "A kid-friendly toasted club sandwich filled with mild, creamy chicken salad. Served with fries.",
       "spicy": false,
       "veg": false,
@@ -1192,7 +1242,7 @@ export const menuData = {
     {
       "title": "Grilled Veg Cheese Sandwich",
       "name": "Grilled Veg Cheese Sandwich",
-      "price": 273,
+      "price": 300,
       "description": "Three bread slices filled with grilled zucchini, roasted bell peppers, fresh herbs, and cheese. Served with fries.",
       "spicy": false,
       "veg": true,
@@ -1203,7 +1253,7 @@ export const menuData = {
     {
       "title": "Classic Margherita Pizza",
       "name": "Classic Margherita Pizza",
-      "price": 418,
+      "price": 460,
       "description": "12-inch thin crust pizza with house marinara, fresh basil, cherry tomatoes, and loaded mozzarella.",
       "spicy": false,
       "veg": true,
@@ -1214,7 +1264,7 @@ export const menuData = {
     {
       "title": "Tender Chicken Fajitas Pizza",
       "name": "Tender Chicken Fajitas Pizza",
-      "price": 471,
+      "price": 518,
       "description": "12-inch pizza loaded with chicken shreds, bell peppers, cajun spices, mushrooms, red onion, and mozzarella.",
       "spicy": true,
       "veg": false,
@@ -1225,7 +1275,7 @@ export const menuData = {
     {
       "title": "Roasted Veg Pizza",
       "name": "Roasted Veg Pizza",
-      "price": 418,
+      "price": 460,
       "description": "12-inch pizza topped with yellow and green zucchini, roasted bell peppers, olives, basil, onions, and cheese.",
       "spicy": false,
       "veg": true,
@@ -1236,7 +1286,7 @@ export const menuData = {
     {
       "title": "BBQ Chicken Pizza",
       "name": "BBQ Chicken Pizza",
-      "price": 481,
+      "price": 529,
       "description": "12-inch pizza topped with BBQ chicken chunks, cheddar, mozzarella, gouda cheese, and a sweet & tangy sauce.",
       "spicy": false,
       "veg": false,
@@ -1247,7 +1297,7 @@ export const menuData = {
     {
       "title": "Four Season Pizza",
       "name": "Four Season Pizza",
-      "price": 513,
+      "price": 564,
       "description": "12-inch gourmet pizza featuring four distinct cheese quarters: blue cheese, mozzarella, English cheddar, and gouda.",
       "spicy": false,
       "veg": true,
@@ -1260,7 +1310,7 @@ export const menuData = {
     {
       "title": "Avocado Shake",
       "name": "Avocado Shake",
-      "price": 209,
+      "price": 230,
       "description": "Rich, creamy shake made with fresh butter avocados and cold organic milk.",
       "spicy": false,
       "veg": true,
@@ -1271,7 +1321,7 @@ export const menuData = {
     {
       "title": "Ice Coffee",
       "name": "Ice Coffee",
-      "price": 177,
+      "price": 169,
       "description": "Classic blended iced coffee topped with a rich scoop of Spanish vanilla ice cream.",
       "spicy": false,
       "veg": true,
@@ -1282,7 +1332,7 @@ export const menuData = {
     {
       "title": "Sharjah Delight",
       "name": "Sharjah Delight",
-      "price": 154,
+      "price": 169,
       "description": "The classic Malabar shake made with banana, milk, boost, and topped with honey and nuts.",
       "spicy": false,
       "veg": true,
@@ -1293,7 +1343,7 @@ export const menuData = {
     {
       "title": "Dates Delight",
       "name": "Dates Delight",
-      "price": 151,
+      "price": 166,
       "description": "A nutritious, thick blend of premium imported dates, chilled milk, and crushed almonds.",
       "spicy": false,
       "veg": true,
@@ -1304,7 +1354,7 @@ export const menuData = {
     {
       "title": "Pinacolada",
       "name": "Pinacolada",
-      "price": 199,
+      "price": 219,
       "description": "A tropical, refreshing mocktail made with sweet pineapple juice, coconut cream, and crushed ice.",
       "spicy": false,
       "veg": true,
@@ -1315,7 +1365,7 @@ export const menuData = {
     {
       "title": "Pina Blue",
       "name": "Pina Blue",
-      "price": 199,
+      "price": 219,
       "description": "A vibrant blue mocktail blending blue curacao syrup, pineapple juice, and coconut cream.",
       "spicy": false,
       "veg": true,
@@ -1326,7 +1376,7 @@ export const menuData = {
     {
       "title": "Red Velvet Shake",
       "name": "Red Velvet Shake",
-      "price": 209,
+      "price": 230,
       "description": "Decadent shake blending red velvet cake crumbles, milk, and cream cheese syrup.",
       "spicy": false,
       "veg": true,
@@ -1337,7 +1387,7 @@ export const menuData = {
     {
       "title": "Nutella Surprise",
       "name": "Nutella Surprise",
-      "price": 209,
+      "price": 250,
       "description": "A chocolate lover's dream: rich Nutella chocolate spread blended with vanilla ice cream and milk.",
       "spicy": false,
       "veg": true,
@@ -1348,7 +1398,7 @@ export const menuData = {
     {
       "title": "Spanish Delight Shake",
       "name": "Spanish Delight Shake",
-      "price": 167,
+      "price": 184,
       "description": "Creamy, rich milkshake blended with premium Spanish delight caramel-butterscotch ice cream.",
       "spicy": false,
       "veg": true,
@@ -1359,7 +1409,7 @@ export const menuData = {
     {
       "title": "Lotus Biscoff Shake",
       "name": "Lotus Biscoff Shake",
-      "price": 219,
+      "price": 241,
       "description": "Thick, premium shake featuring Lotus Biscoff spread, crushed Biscoff cookies, and vanilla cream.",
       "spicy": false,
       "veg": true,
@@ -1370,7 +1420,7 @@ export const menuData = {
     {
       "title": "Butterscotch Shake",
       "name": "Butterscotch Shake",
-      "price": 178,
+      "price": 196,
       "description": "Sweet milkshake flavored with buttery butterscotch crunch syrup and vanilla ice cream.",
       "spicy": false,
       "veg": true,
@@ -1381,7 +1431,7 @@ export const menuData = {
     {
       "title": "Jack Fruit Shake (Seasonal)",
       "name": "Jack Fruit Shake (Seasonal)",
-      "price": 198,
+      "price": 218,
       "description": "A unique seasonal treat made of sweet ripe local jackfruit pods blended with milk.",
       "spicy": false,
       "veg": true,
@@ -1392,7 +1442,7 @@ export const menuData = {
     {
       "title": "Oreo Shake",
       "name": "Oreo Shake",
-      "price": 167,
+      "price": 184,
       "description": "Classic cookies and cream shake made with crushed Oreo biscuits, vanilla ice cream, and milk.",
       "spicy": false,
       "veg": true,
@@ -1403,7 +1453,7 @@ export const menuData = {
     {
       "title": "Kitkat Shake",
       "name": "Kitkat Shake",
-      "price": 185,
+      "price": 184,
       "description": "Chilled milk blended with crispy Kitkat chocolate bars and vanilla ice cream, topped with chocolate sauce.",
       "spicy": false,
       "veg": true,
@@ -1414,7 +1464,7 @@ export const menuData = {
     {
       "title": "Mango Shake",
       "name": "Mango Shake",
-      "price": 153,
+      "price": 169,
       "description": "Rich, summer-fresh shake made with pulpy ripe Alphonso mangoes and chilled milk.",
       "spicy": false,
       "veg": true,
@@ -1425,7 +1475,7 @@ export const menuData = {
     {
       "title": "Chikoo Shake",
       "name": "Chikoo Shake",
-      "price": 153,
+      "price": 169,
       "description": "Smooth, sweet milkshake made with ripe sapodilla (chikoo) fruit paste and honey.",
       "spicy": false,
       "veg": true,
@@ -1436,7 +1486,7 @@ export const menuData = {
     {
       "title": "Peanut Caramel Delight",
       "name": "Peanut Caramel Delight",
-      "price": 178,
+      "price": 196,
       "description": "A rich blend of peanut butter, buttery salted caramel sauce, milk, and vanilla cream.",
       "spicy": false,
       "veg": true,
@@ -1447,7 +1497,7 @@ export const menuData = {
     {
       "title": "Tender Coconut Shake",
       "name": "Tender Coconut Shake",
-      "price": 177,
+      "price": 195,
       "description": "Light and refreshing shake made with fresh tender coconut pulp (karikku) and sweet coconut water.",
       "spicy": false,
       "veg": true,
@@ -1458,7 +1508,7 @@ export const menuData = {
     {
       "title": "Passion Fruit Mojito",
       "name": "Passion Fruit Mojito",
-      "price": 166,
+      "price": 183,
       "description": "Tangy and sweet fizzy drink made with real passion fruit pulp, mint leaves, lime, and soda.",
       "spicy": false,
       "veg": true,
@@ -1469,7 +1519,7 @@ export const menuData = {
     {
       "title": "Lemon Mint Mojito",
       "name": "Lemon Mint Mojito",
-      "price": 166,
+      "price": 183,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -1480,7 +1530,7 @@ export const menuData = {
     {
       "title": "Green Apple Mojito",
       "name": "Green Apple Mojito",
-      "price": 166,
+      "price": 183,
       "description": "Sparkling refreshing mocktail made with green apple syrup, fresh mint, lime slices, and soda.",
       "spicy": false,
       "veg": true,
@@ -1491,7 +1541,7 @@ export const menuData = {
     {
       "title": "Peach Mojito",
       "name": "Peach Mojito",
-      "price": 166,
+      "price": 183,
       "description": "Fizzy mocktail infused with sweet peach syrup, fresh mint leaves, lime, and soda.",
       "spicy": false,
       "veg": true,
@@ -1502,7 +1552,7 @@ export const menuData = {
     {
       "title": "Mango Mojito",
       "name": "Mango Mojito",
-      "price": 166,
+      "price": 183,
       "description": "A tropical twist featuring sweet mango nectar, fresh mint, lime juice, and soda.",
       "spicy": false,
       "veg": true,
@@ -1513,7 +1563,7 @@ export const menuData = {
     {
       "title": "Classic Mojito",
       "name": "Classic Mojito",
-      "price": 177,
+      "price": 195,
       "description": "The timeless summer refresher: fresh squeezed lime juice, muddled mint leaves, sugar syrup, and soda.",
       "spicy": false,
       "veg": true,
@@ -1524,7 +1574,7 @@ export const menuData = {
     {
       "title": "Watermelon Mojito",
       "name": "Watermelon Mojito",
-      "price": 177,
+      "price": 195,
       "description": "Fizzy drink with fresh watermelon juice, muddled mint, lime wedges, and sparkling soda.",
       "spicy": false,
       "veg": true,
@@ -1535,7 +1585,7 @@ export const menuData = {
     {
       "title": "Blue Curacao Mojito",
       "name": "Blue Curacao Mojito",
-      "price": 177,
+      "price": 195,
       "description": "Vibrant blue mocktail with orange-peel curacao syrup, lime, fresh mint, and soda.",
       "spicy": false,
       "veg": true,
@@ -1546,7 +1596,7 @@ export const menuData = {
     {
       "title": "Blueberry Mojito",
       "name": "Blueberry Mojito",
-      "price": 177,
+      "price": 195,
       "description": "Deep purple mojito with wild blueberry puree, muddled mint, lime, and sparkling soda.",
       "spicy": false,
       "veg": true,
@@ -1557,7 +1607,7 @@ export const menuData = {
     {
       "title": "Strawberry Mojito",
       "name": "Strawberry Mojito",
-      "price": 177,
+      "price": 195,
       "description": "Sweet and bubbly drink featuring fresh strawberry puree, mint, lime, and soda.",
       "spicy": false,
       "veg": true,
@@ -1568,7 +1618,7 @@ export const menuData = {
     {
       "title": "Red Diamond Mojito",
       "name": "Red Diamond Mojito",
-      "price": 177,
+      "price": 195,
       "description": "A signature crimson mocktail with a secret blend of red berries, mint, lime, and soda.",
       "spicy": false,
       "veg": true,
@@ -1579,7 +1629,7 @@ export const menuData = {
     {
       "title": "Passion Fruit Ice Tea",
       "name": "Passion Fruit Ice Tea",
-      "price": 177,
+      "price": 195,
       "description": "Chilled brewed black tea flavored with sweet passion fruit nectar and mint.",
       "spicy": false,
       "veg": true,
@@ -1590,7 +1640,7 @@ export const menuData = {
     {
       "title": "Classic Ice Tea",
       "name": "Classic Ice Tea",
-      "price": 177,
+      "price": 195,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -1601,7 +1651,7 @@ export const menuData = {
     {
       "title": "Watermelon Ice Tea",
       "name": "Watermelon Ice Tea",
-      "price": 177,
+      "price": 195,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -1612,7 +1662,7 @@ export const menuData = {
     {
       "title": "Mango Ice Tea",
       "name": "Mango Ice Tea",
-      "price": 177,
+      "price": 195,
       "description": "Chilled iced black tea blended with a sweet touch of ripe mango flavor.",
       "spicy": false,
       "veg": true,
@@ -1623,7 +1673,7 @@ export const menuData = {
     {
       "title": "Blue Diamond Ice Tea",
       "name": "Blue Diamond Ice Tea",
-      "price": 177,
+      "price": 195,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -1634,7 +1684,7 @@ export const menuData = {
     {
       "title": "Blueberry Ice Tea",
       "name": "Blueberry Ice Tea",
-      "price": 177,
+      "price": 195,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -1645,7 +1695,7 @@ export const menuData = {
     {
       "title": "Strawberry Ice Tea",
       "name": "Strawberry Ice Tea",
-      "price": 177,
+      "price": 195,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -1656,7 +1706,7 @@ export const menuData = {
     {
       "title": "Peach Ice Tea",
       "name": "Peach Ice Tea",
-      "price": 177,
+      "price": 195,
       "description": "The classic summer iced tea: black tea brewed and sweetened with juicy peach syrup.",
       "spicy": false,
       "veg": true,
@@ -1667,7 +1717,7 @@ export const menuData = {
     {
       "title": "Red Diamond Ice Tea",
       "name": "Red Diamond Ice Tea",
-      "price": 177,
+      "price": 195,
       "description": "",
       "spicy": false,
       "veg": false,
@@ -1678,7 +1728,7 @@ export const menuData = {
     {
       "title": "Lemon Mint Ice Tea",
       "name": "Lemon Mint Ice Tea",
-      "price": 166,
+      "price": 183,
       "description": "Refreshing cold brewed tea infused with tangy lemon juice and fresh garden mint.",
       "spicy": false,
       "veg": true,
@@ -1689,7 +1739,7 @@ export const menuData = {
     {
       "title": "Green Apple Ice Tea",
       "name": "Green Apple Ice Tea",
-      "price": 166,
+      "price": 183,
       "description": "Chilled iced tea combined with crisp green apple syrup and lemon slices.",
       "spicy": false,
       "veg": true,
@@ -1702,7 +1752,7 @@ export const menuData = {
     {
       "title": "Fruit Cocktail Juice",
       "name": "Fruit Cocktail Juice",
-      "price": 181,
+      "price": 199,
       "description": "Freshly squeezed juice blend of strawberry, ripe banana, sweet mango, and red apple.",
       "spicy": false,
       "veg": true,
@@ -1713,7 +1763,7 @@ export const menuData = {
     {
       "title": "Apple Carrots Juice",
       "name": "Apple Carrots Juice",
-      "price": 162,
+      "price": 178,
       "description": "Healthy, cold-pressed juice of sweet red carrots and crisp red apples. Served with ice.",
       "spicy": false,
       "veg": true,
@@ -1724,7 +1774,7 @@ export const menuData = {
     {
       "title": "Red Apple Juice",
       "name": "Red Apple Juice",
-      "price": 171,
+      "price": 188,
       "description": "Sweet, pure juice pressed from fresh red apples, served chilled over ice.",
       "spicy": false,
       "veg": true,
@@ -1735,7 +1785,7 @@ export const menuData = {
     {
       "title": "Orange / Sweet Lime Juice",
       "name": "Orange / Sweet Lime Juice",
-      "price": 157,
+      "price": 173,
       "description": "Freshly squeezed citrus juice, high in Vitamin C, served cold with ice.",
       "spicy": false,
       "veg": true,
@@ -1746,7 +1796,7 @@ export const menuData = {
     {
       "title": "Watermelon Juice",
       "name": "Watermelon Juice",
-      "price": 130,
+      "price": 143,
       "description": "Refreshing, hydrating pure watermelon juice pressed fresh and served over ice.",
       "spicy": false,
       "veg": true,
@@ -1757,7 +1807,7 @@ export const menuData = {
     {
       "title": "Pomegranate Juice",
       "name": "Pomegranate Juice",
-      "price": 176,
+      "price": 194,
       "description": "Rich, ruby-red antioxidant juice pressed from fresh pomegranate seeds. Served with ice.",
       "spicy": false,
       "veg": true,
@@ -1768,7 +1818,7 @@ export const menuData = {
     {
       "title": "Pineapple Juice",
       "name": "Pineapple Juice",
-      "price": 140,
+      "price": 154,
       "description": "Tangy and sweet fresh pineapple juice, served chilled over ice.",
       "spicy": false,
       "veg": true,
@@ -1779,7 +1829,7 @@ export const menuData = {
     {
       "title": "Lime Juice",
       "name": "Lime Juice",
-      "price": 50,
+      "price": 55,
       "description": "Fresh squeezed lime juice, water, and sugar syrup, served chilled.",
       "spicy": false,
       "veg": true,
@@ -1790,7 +1840,7 @@ export const menuData = {
     {
       "title": "Mint Lime Juice",
       "name": "Mint Lime Juice",
-      "price": 60,
+      "price": 66,
       "description": "Chilled lime juice blended with fresh green mint leaves for extra freshness.",
       "spicy": false,
       "veg": true,
@@ -1801,7 +1851,7 @@ export const menuData = {
     {
       "title": "Strawberry Banana Smoothie",
       "name": "Strawberry Banana Smoothie",
-      "price": 225,
+      "price": 248,
       "description": "Creamy probiotic smoothie made with fresh strawberries, banana, and A2 organic curd.",
       "spicy": false,
       "veg": true,
@@ -1812,7 +1862,7 @@ export const menuData = {
     {
       "title": "Berry Mix Smoothie",
       "name": "Berry Mix Smoothie",
-      "price": 251,
+      "price": 276,
       "description": "Rich berry smoothie combining blueberries, raspberries, cranberries, strawberries, and A2 organic curd.",
       "spicy": false,
       "veg": true,
@@ -1823,7 +1873,7 @@ export const menuData = {
     {
       "title": "Kanary Special Smoothie",
       "name": "Kanary Special Smoothie",
-      "price": 209,
+      "price": 230,
       "description": "Gourmet smoothie: red & green apples, pomegranate, strawberry, cus-cus, blueberry puree, and A2 organic curd.",
       "spicy": false,
       "veg": true,
@@ -1834,7 +1884,7 @@ export const menuData = {
     {
       "title": "Mixed Nuts Smoothie",
       "name": "Mixed Nuts Smoothie",
-      "price": 209,
+      "price": 230,
       "description": "Healthy high-protein smoothie made of crushed almonds, cashews, pistachios, and A2 organic curd.",
       "spicy": false,
       "veg": true,
@@ -1845,7 +1895,7 @@ export const menuData = {
     {
       "title": "Royal Cream Smoothie",
       "name": "Royal Cream Smoothie",
-      "price": 209,
+      "price": 230,
       "description": "A rich treat: sweet mango, strawberry, chopped pistachios, and A2 organic curd.",
       "spicy": false,
       "veg": true,
@@ -1858,7 +1908,7 @@ export const menuData = {
     {
       "title": "Cassatta Ice Cream",
       "name": "Cassatta Ice Cream",
-      "price": 286,
+      "price": 315,
       "description": "Traditional layered cassatta ice cream slice, rich in nuts and cake sponge.",
       "spicy": false,
       "veg": true,
@@ -1869,7 +1919,7 @@ export const menuData = {
     {
       "title": "Banana Split",
       "name": "Banana Split",
-      "price": 209,
+      "price": 230,
       "description": "Gourmet banana split served with three scoops: Spanish Delight, Vanilla, and Chocolate ice cream.",
       "spicy": false,
       "veg": true,
@@ -1880,7 +1930,7 @@ export const menuData = {
     {
       "title": "Kanary Special Falooda",
       "name": "Kanary Special Falooda",
-      "price": 284,
+      "price": 315,
       "description": "Fabulous falooda packed with apple, anar, grapes, pineapple, cashews, raisins, rose milk, and vanilla ice cream.",
       "spicy": false,
       "veg": true,
@@ -1891,7 +1941,7 @@ export const menuData = {
     {
       "title": "Strawberry Scoop",
       "name": "Strawberry Scoop",
-      "price": 103,
+      "price": 113,
       "description": "Single scoop of premium creamy strawberry ice cream.",
       "spicy": false,
       "veg": true,
@@ -1902,7 +1952,7 @@ export const menuData = {
     {
       "title": "Vanilla Scoop",
       "name": "Vanilla Scoop",
-      "price": 108,
+      "price": 113,
       "description": "Classic scoop of rich Madagascar vanilla bean ice cream.",
       "spicy": false,
       "veg": true,
@@ -1913,7 +1963,7 @@ export const menuData = {
     {
       "title": "Chocolate Scoop",
       "name": "Chocolate Scoop",
-      "price": 127,
+      "price": 140,
       "description": "Rich, creamy milk chocolate scoop of ice cream.",
       "spicy": false,
       "veg": true,
@@ -1924,7 +1974,7 @@ export const menuData = {
     {
       "title": "Butterscotch Scoop",
       "name": "Butterscotch Scoop",
-      "price": 145,
+      "price": 160,
       "description": "Sweet scoop of butterscotch ice cream with caramelized butter crunch pieces.",
       "spicy": false,
       "veg": true,
@@ -1935,7 +1985,7 @@ export const menuData = {
     {
       "title": "Spanish Delight Scoop",
       "name": "Spanish Delight Scoop",
-      "price": 135,
+      "price": 149,
       "description": "A scoop of premium, creamy Spanish caramel-butterscotch ripple ice cream.",
       "spicy": false,
       "veg": true,
@@ -1946,7 +1996,7 @@ export const menuData = {
     {
       "title": "Mango Scoop",
       "name": "Mango Scoop",
-      "price": 114,
+      "price": 125,
       "description": "Premium scoop of rich, sweet Alphonso mango ice cream.",
       "spicy": false,
       "veg": true,
@@ -1957,7 +2007,7 @@ export const menuData = {
     {
       "title": "Red Velvet Scoop",
       "name": "Red Velvet Scoop",
-      "price": 157,
+      "price": 173,
       "description": "Luxury scoop of red velvet ice cream blended with real red velvet cake bits.",
       "spicy": false,
       "veg": true,
@@ -2034,7 +2084,7 @@ export const menuData = {
     {
       "title": "Ginger Lemon Tea",
       "name": "Ginger Lemon Tea",
-      "price": 38,
+      "price": 29,
       "description": "Hot soothing black tea infused with fresh ginger juice and lemon.",
       "spicy": false,
       "veg": true,
@@ -2045,7 +2095,7 @@ export const menuData = {
     {
       "title": "Mint Tea",
       "name": "Mint Tea",
-      "price": 38,
+      "price": 19,
       "description": "Hot tea infused with fresh muddled mint leaves.",
       "spicy": false,
       "veg": true,
@@ -2056,7 +2106,7 @@ export const menuData = {
     {
       "title": "Boost (A2 Milk)",
       "name": "Boost (A2 Milk)",
-      "price": 48,
+      "price": 45,
       "description": "Hot chocolate-malt Boost drink made with rich A2 milk.",
       "spicy": false,
       "veg": true,
@@ -2067,7 +2117,7 @@ export const menuData = {
     {
       "title": "Horlicks (A2 Milk)",
       "name": "Horlicks (A2 Milk)",
-      "price": 48,
+      "price": 45,
       "description": "Hot wheat-malt Horlicks drink prepared with rich A2 milk.",
       "spicy": false,
       "veg": true,
@@ -2078,7 +2128,7 @@ export const menuData = {
     {
       "title": "Lemon Tea",
       "name": "Lemon Tea",
-      "price": 28,
+      "price": 19,
       "description": "Classic hot lemon tea, light and refreshing.",
       "spicy": false,
       "veg": true,
@@ -2089,7 +2139,7 @@ export const menuData = {
     {
       "title": "Green Tea",
       "name": "Green Tea",
-      "price": 33,
+      "price": 24,
       "description": "A cup of hot, antioxidant-rich organic green tea.",
       "spicy": false,
       "veg": true,
@@ -2100,7 +2150,7 @@ export const menuData = {
     {
       "title": "Green Apple Tea",
       "name": "Green Apple Tea",
-      "price": 38,
+      "price": 43,
       "description": "Hot tea infused with sweet green apple syrup and lemon juice.",
       "spicy": false,
       "veg": true,
@@ -2111,7 +2161,7 @@ export const menuData = {
     {
       "title": "Sulaimani",
       "name": "Sulaimani",
-      "price": 19,
+      "price": 24,
       "description": "Traditional spice-infused black tea with a squeeze of fresh lemon.",
       "spicy": false,
       "veg": true,
@@ -2144,7 +2194,7 @@ export const menuData = {
     {
       "title": "Tea (A2 Milk)",
       "name": "Tea (A2 Milk)",
-      "price": 28,
+      "price": 19,
       "description": "Traditional hot milk tea made with rich, pure organic A2 milk.",
       "spicy": false,
       "veg": true,
@@ -2179,7 +2229,7 @@ export const menuData = {
     {
       "title": "Traditional Veg Meals",
       "name": "Traditional Veg Meals",
-      "price": 130,
+      "price": 143,
       "description": "Traditional Kerala meals with red/white rice, sambar, aviyal, thoran, pullissery, pickle, papadam, and payasam.",
       "spicy": false,
       "veg": true,
@@ -2190,7 +2240,7 @@ export const menuData = {
     {
       "title": "Chicken Curry Meals",
       "name": "Chicken Curry Meals",
-      "price": 230,
+      "price": 253,
       "description": "Traditional Kerala meals served with red/white rice, regional chicken curry, thoran, pickles, and accompaniments.",
       "spicy": true,
       "veg": false,
@@ -2201,7 +2251,7 @@ export const menuData = {
     {
       "title": "Beef Curry Meals",
       "name": "Beef Curry Meals",
-      "price": 270,
+      "price": 297,
       "description": "Classic Kerala meals served with white/red rice, slow-roasted spicy beef curry, side dishes, and papadam.",
       "spicy": true,
       "veg": false,
@@ -2211,3 +2261,4 @@ export const menuData = {
     }
   ]
 };
+export default menuData;
