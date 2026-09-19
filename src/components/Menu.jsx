@@ -10,46 +10,13 @@ export default function Menu() {
   const [currentMenuData, setCurrentMenuData] = useState(initialMenuData);
 
   useEffect(() => {
-    fetch('/api/save-menu')
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('kanary_menu_data');
+    }
+    fetch('/api/save-menu', { cache: 'no-store' })
       .then(res => res.json())
-      .then(async (data) => {
+      .then((data) => {
         let serverMenu = (data.success && data.menuData) ? data.menuData : initialMenuData;
-
-        if (typeof window !== 'undefined') {
-          const localDataStr = localStorage.getItem('kanary_menu_data');
-          if (localDataStr) {
-            try {
-              const localMenu = JSON.parse(localDataStr);
-              let hasNewLocalItems = false;
-              Object.keys(localMenu).forEach(cat => {
-                if (Array.isArray(localMenu[cat])) {
-                  if (!serverMenu[cat]) serverMenu[cat] = [];
-                  localMenu[cat].forEach(localItem => {
-                    const localName = (localItem.name || localItem.title || '').trim().toLowerCase();
-                    if (!localName) return;
-                    const exists = serverMenu[cat].some(s => (s.name || s.title || '').trim().toLowerCase() === localName);
-                    if (!exists) {
-                      serverMenu[cat].push(localItem);
-                      hasNewLocalItems = true;
-                    }
-                  });
-                }
-              });
-
-              if (hasNewLocalItems) {
-                await fetch('/api/save-menu', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ menuData: serverMenu })
-                });
-              }
-              localStorage.removeItem('kanary_menu_data');
-            } catch(e) {
-              console.error(e);
-            }
-          }
-        }
-
         setCurrentMenuData(serverMenu);
       })
       .catch(err => console.error(err));
