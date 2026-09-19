@@ -71,19 +71,52 @@ export default function FullMenuPage() {
   const [isSaving, setIsSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState('');
 
-  // Always fetch latest master menu from server (MongoDB Atlas) so all devices sync added & deleted items
+  // Always fetch latest master menu from server (MongoDB Atlas) and auto-sync any custom dishes saved in browser localStorage
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('kanary_menu_data');
-    }
-
     fetch('/api/save-menu')
       .then(res => res.json())
-      .then(data => {
-        if (data.success && data.menuData) {
-          const sanitized = sanitizeCloudinaryUrls(data.menuData);
-          setCurrentMenuData(sanitized);
+      .then(async (data) => {
+        let serverMenu = (data.success && data.menuData) ? data.menuData : initialMenuData;
+
+        // Auto-recover any custom dishes saved in this browser's localStorage
+        if (typeof window !== 'undefined') {
+          const localDataStr = localStorage.getItem('kanary_menu_data');
+          if (localDataStr) {
+            try {
+              const localMenu = JSON.parse(localDataStr);
+              let hasNewLocalItems = false;
+              Object.keys(localMenu).forEach(cat => {
+                if (Array.isArray(localMenu[cat])) {
+                  if (!serverMenu[cat]) serverMenu[cat] = [];
+                  localMenu[cat].forEach(localItem => {
+                    const localName = (localItem.name || localItem.title || '').trim().toLowerCase();
+                    if (!localName) return;
+                    const exists = serverMenu[cat].some(s => (s.name || s.title || '').trim().toLowerCase() === localName);
+                    if (!exists) {
+                      serverMenu[cat].push(localItem);
+                      hasNewLocalItems = true;
+                    }
+                  });
+                }
+              });
+
+              if (hasNewLocalItems) {
+                console.log('Recovered custom dishes from browser localStorage! Syncing to MongoDB Atlas...');
+                await fetch('/api/save-menu', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ menuData: serverMenu })
+                });
+              }
+              localStorage.removeItem('kanary_menu_data');
+            } catch(e) {
+              console.error('Error auto-recovering localStorage data:', e);
+            }
+          }
         }
+
+        const sanitized = sanitizeCloudinaryUrls(serverMenu);
+        setCurrentMenuData(sanitized);
       })
       .catch(err => console.error('Failed to sync master menu from server:', err));
   }, []);
