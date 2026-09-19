@@ -58,7 +58,7 @@ export const menuData = {
     {
       "title": "Japanese Wagyu (Pre-Booked)",
       "name": "Japanese Wagyu (Pre-Booked)",
-      "price": 0,
+      "price": "As Per Size",
       "description": "",
       "spicy": false,
       "veg": false,
