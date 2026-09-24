@@ -27,9 +27,14 @@ export default function Hero() {
           loop
           muted
           playsInline
-          src="/video/kanary%20web%20v1.mp4"
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        />
+        >
+          <source src="/video/kanary_web_v1.mp4" type="video/mp4" />
+          <source src="/video/kanary%20web%20v1.mp4" type="video/mp4" />
+          <source src="/video/kanary web v1.mp4" type="video/mp4" />
+          <source src="/video/hero_bg.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-primary-bg/80 via-primary-bg/50 to-transparent pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary-bg/70 via-transparent to-primary-bg/30 pointer-events-none" />
       </div>
