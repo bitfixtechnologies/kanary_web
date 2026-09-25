@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/kanaryrestaup6av/public_html/kanaryrestaurant.com
+    - /bin/cp -R public $DEPLOYPATH
