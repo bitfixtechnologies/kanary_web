@@ -7,7 +7,8 @@ import { useState, useEffect } from 'react';
 import { menuData as initialMenuData } from '../data/menuData';
 
 export default function Menu() {
-  const [currentMenuData, setCurrentMenuData] = useState(initialMenuData);
+  const [currentMenuData, setCurrentMenuData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -16,10 +17,15 @@ export default function Menu() {
     fetch('/api/save-menu', { cache: 'no-store' })
       .then(res => res.json())
       .then((data) => {
-        let serverMenu = (data.success && data.menuData) ? data.menuData : initialMenuData;
-        setCurrentMenuData(serverMenu);
+        if (data.success && data.menuData) {
+          setCurrentMenuData(data.menuData);
+        }
+        setIsLoading(false);
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error('Failed to fetch menu:', err);
+        setIsLoading(false);
+      });
   }, []);
 
   const chefSpecials = currentMenuData?.chefSpecials || [];
@@ -55,65 +61,91 @@ export default function Menu() {
         </div>
 
         {/* 6 Specialties Grid (3 on 1st Row, 3 on 2nd Row) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {specialties.map((dish, index) => (
-            <motion.div
-              key={dish.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="bg-primary-dark rounded-2xl overflow-hidden border border-gold/10 hover:border-gold/30 shadow-2xl flex flex-col h-full transition-all duration-300"
-            >
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={dish.image} 
-                  alt={dish.name} 
-                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute top-3 right-3 flex flex-col gap-2">
-                  {dish.popular && (
-                    <span className="bg-gold text-primary-dark text-[10px] font-bold tracking-wider px-2.5 py-1 rounded-full uppercase flex items-center gap-1 shadow-md">
-                      <Award className="w-3 h-3" /> Chef's Special
-                    </span>
-                  )}
-                  {dish.spicy && (
-                    <span className="bg-red-600 text-white text-[10px] font-bold tracking-wider px-2.5 py-1 rounded-full uppercase flex items-center gap-1 shadow-md">
-                      <Flame className="w-3 h-3" /> Spicy
-                    </span>
-                  )}
+        {isLoading ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[1, 2, 3, 4, 5, 6].map((skIndex) => (
+              <div
+                key={skIndex}
+                className="bg-primary-dark/80 rounded-2xl overflow-hidden border border-gold/10 shadow-2xl flex flex-col h-full animate-pulse"
+              >
+                <div className="h-64 bg-white/5 relative overflow-hidden flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full border-2 border-gold/30 border-t-gold animate-spin" />
                 </div>
-              </div>
-
-              <div className="p-6 flex flex-col flex-grow justify-between">
-                <div className="space-y-3">
-                  <div className="flex justify-between items-start gap-2">
-                    <h4 className="text-white font-serif text-xl font-bold group-hover:text-gold transition-colors">
-                      {dish.name}
-                    </h4>
-                    {dish.veg && <Leaf className="w-4 h-4 text-green-500 flex-shrink-0 mt-1" />}
+                <div className="p-6 flex flex-col flex-grow justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="h-6 bg-white/10 rounded-md w-3/4" />
+                    <div className="h-4 bg-white/5 rounded-md w-full" />
+                    <div className="h-4 bg-white/5 rounded-md w-4/5" />
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {dish.description}
-                  </p>
-                </div>
-
-                <div className="mt-4 pt-4 border-t border-gold/10 flex justify-between items-center">
-                  <span className="text-gold font-sans font-bold text-xl">
-                    {dish.price}
-                  </span>
-                  <Link 
-                    href="/menu" 
-                    className="text-xs font-sans font-semibold text-gray-400 hover:text-gold transition-colors"
-                  >
-                    View in Menu →
-                  </Link>
+                  <div className="pt-4 border-t border-gold/10 flex justify-between items-center">
+                    <div className="h-6 bg-gold/20 rounded-md w-1/4" />
+                    <div className="h-4 bg-white/10 rounded-md w-1/3" />
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {specialties.map((dish, index) => (
+              <motion.div
+                key={dish.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="bg-primary-dark rounded-2xl overflow-hidden border border-gold/10 hover:border-gold/30 shadow-2xl flex flex-col h-full transition-all duration-300"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={dish.image} 
+                    alt={dish.name} 
+                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute top-3 right-3 flex flex-col gap-2">
+                    {dish.popular && (
+                      <span className="bg-gold text-primary-dark text-[10px] font-bold tracking-wider px-2.5 py-1 rounded-full uppercase flex items-center gap-1 shadow-md">
+                        <Award className="w-3 h-3" /> Chef's Special
+                      </span>
+                    )}
+                    {dish.spicy && (
+                      <span className="bg-red-600 text-white text-[10px] font-bold tracking-wider px-2.5 py-1 rounded-full uppercase flex items-center gap-1 shadow-md">
+                        <Flame className="w-3 h-3" /> Spicy
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                <div className="p-6 flex flex-col flex-grow justify-between">
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-start gap-2">
+                      <h4 className="text-white font-serif text-xl font-bold group-hover:text-gold transition-colors">
+                        {dish.name}
+                      </h4>
+                      {dish.veg && <Leaf className="w-4 h-4 text-green-500 flex-shrink-0 mt-1" />}
+                    </div>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {dish.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t border-gold/10 flex justify-between items-center">
+                    <span className="text-gold font-sans font-bold text-xl">
+                      {dish.price}
+                    </span>
+                    <Link 
+                      href="/menu" 
+                      className="text-xs font-sans font-semibold text-gray-400 hover:text-gold transition-colors"
+                    >
+                      View in Menu →
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
 
         {/* Look Menu CTA Button */}
         <div className="text-center">
