@@ -58,7 +58,8 @@ const sanitizeCloudinaryUrls = (menuDataObj) => {
 };
 
 export default function FullMenuPage() {
-  const [currentMenuData, setCurrentMenuData] = useState(() => sanitizeCloudinaryUrls(initialMenuData));
+  const [currentMenuData, setCurrentMenuData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('chefSpecials');
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all'); // all, veg, spicy, dairy
@@ -79,11 +80,16 @@ export default function FullMenuPage() {
     fetch('/api/save-menu', { cache: 'no-store' })
       .then(res => res.json())
       .then((data) => {
-        let serverMenu = (data.success && data.menuData) ? data.menuData : initialMenuData;
-        const sanitized = sanitizeCloudinaryUrls(serverMenu);
-        setCurrentMenuData(sanitized);
+        if (data.success && data.menuData) {
+          const sanitized = sanitizeCloudinaryUrls(data.menuData);
+          setCurrentMenuData(sanitized);
+        }
+        setIsLoading(false);
       })
-      .catch(err => console.error('Failed to sync master menu from server:', err));
+      .catch(err => {
+        console.error('Failed to sync master menu from server:', err);
+        setIsLoading(false);
+      });
   }, []);
 
   // Add New Dish State
@@ -182,7 +188,7 @@ export default function FullMenuPage() {
 
   // Always retrieve fresh, deep-cloned menu data from current state
   const getFreshMenuData = () => {
-    return JSON.parse(JSON.stringify(currentMenuData));
+    return JSON.parse(JSON.stringify(currentMenuData || {}));
   };
 
   const handleAddNewDishSubmit = async (e) => {
@@ -343,8 +349,8 @@ export default function FullMenuPage() {
 
   // Helper to filter items based on search query and selected filter type
   const getFilteredItems = (catId, categoryItems) => {
-    let items = [...categoryItems];
-    if (catId === 'salads' && currentMenuData.meals) {
+    let items = [...(categoryItems || [])];
+    if (catId === 'salads' && currentMenuData?.meals) {
       items = [...items, ...currentMenuData.meals];
     }
 
@@ -534,9 +540,45 @@ export default function FullMenuPage() {
       {/* 4. Menu Items Section */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         
-        {categories.map((cat) => {
-          const rawItems = currentMenuData[cat.id] || [];
-          const filteredItems = getFilteredItems(cat.id, rawItems);
+        {isLoading ? (
+          <div className="space-y-16">
+            <div className="text-center py-6">
+              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs sm:text-sm font-semibold tracking-widest uppercase mb-2 animate-pulse">
+                <div className="w-4 h-4 rounded-full border-2 border-gold border-t-transparent animate-spin" />
+                <span>Loading Menu from Database...</span>
+              </div>
+            </div>
+            {[1, 2, 3].map((catSk) => (
+              <div key={catSk} className="space-y-8 animate-pulse">
+                <div className="flex items-center gap-4">
+                  <div className="h-8 w-48 bg-white/10 rounded-md" />
+                  <div className="flex-grow border-b border-gold/10" />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {[1, 2, 3, 4].map((dishSk) => (
+                    <div 
+                      key={dishSk} 
+                      className="rounded-2xl p-6 border border-gold/20 bg-primary-dark/60 h-44 flex gap-4"
+                    >
+                      <div className="w-28 h-28 bg-white/5 rounded-xl flex-shrink-0 flex items-center justify-center">
+                        <div className="w-6 h-6 border-2 border-gold/20 border-t-gold rounded-full animate-spin" />
+                      </div>
+                      <div className="flex-grow space-y-3">
+                        <div className="h-5 bg-white/10 rounded w-3/4" />
+                        <div className="h-4 bg-white/5 rounded w-full" />
+                        <div className="h-4 bg-white/5 rounded w-1/2" />
+                        <div className="h-5 bg-gold/20 rounded w-1/4 mt-2" />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          categories.map((cat) => {
+            const rawItems = currentMenuData ? (currentMenuData[cat.id] || []) : [];
+            const filteredItems = getFilteredItems(cat.id, rawItems);
 
           if (filteredItems.length === 0 && searchQuery) return null;
 
@@ -728,7 +770,8 @@ export default function FullMenuPage() {
               )}
             </section>
           );
-        })}
+        })
+      )}
 
       </div>
 
