@@ -545,7 +545,7 @@ export default function FullMenuPage() {
             <div className="text-center py-6">
               <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs sm:text-sm font-semibold tracking-widest uppercase mb-2 animate-pulse">
                 <div className="w-4 h-4 rounded-full border-2 border-gold border-t-transparent animate-spin" />
-                <span>Loading Menu from Database...</span>
+                <span>Loading...</span>
               </div>
             </div>
             {[1, 2, 3].map((catSk) => (
